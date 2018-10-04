@@ -11,6 +11,9 @@ class IndexView(generic.ListView):
     context_object_name = 'latestQuestions'
 
     def get_queryset(self):
+        '''
+        Overrides get_queryset from generic.ListView to implement custom lookup logic.
+        '''
         return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
 
 class DetailView(generic.DetailView):
