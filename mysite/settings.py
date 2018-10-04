@@ -26,13 +26,14 @@ SECRET_KEY = 'g#zaxtmg9sfkasine6=smt3n5z2c!(wmu3z%7egp=!nzo-=@4w'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'django-heroku-demo.herokuapp.com',
+    '127.0.0.1',
 ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
