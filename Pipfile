@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+gunicorn = "==19.9.0"
+whitenoise = "==4.1"
+"psycopg2" = "==2.7.5"
+Django = "==2.1.2"
+Markdown = "==2.6.11"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
