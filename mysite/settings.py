@@ -131,6 +131,8 @@ STATICFILES_DIRS = [
     '/static/',
 ]
 
+LOGIN_REDIRECT_URL = '/gigFinder/users'
+
  # Import-Export extra configuration
  
 IMPORT_EXPORT_USE_TRANSACTIONS = True

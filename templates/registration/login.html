@@ -1,18 +1,18 @@
 {% extends 'base.html' %}
-{% load static %}
+<!-- {% load static %} -->
 
-{% block stylesheet %}
-  <link rel="stylesheet" href="{% static './css/gigFinder.css' %}">
-{% endblock %}
+<!-- {% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+{% endblock %} -->
 
 {% block content %}
-<form action="{% url 'gigFinder:login' %}" method="POST">
+<form action="{% url 'login' %}" method="POST">
     {% csrf_token %}
     <div class="text-center mb-4">
         <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
     </div>
 
-    {% if error_message %}
+    {% if form.errors %}
         <p style="color: red">
             <strong>Your username or password didn't match. Please try again.</strong>
         </p>

@@ -21,3 +21,8 @@ urlpatterns = [
     path('', include('polls.urls')),
     path('gigFinder/', include('gig_finder_admin.urls', namespace='gigFinder')),
 ]
+
+#Add Django site authentication urls (for login, logout, password management)
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
